@@ -1,11 +1,10 @@
 import './App.css'
+import { InputForm } from './components/InputForm'
 
 function App() {
 
   return (
-      <div className='text-red-500 text-lg'>
-        <h1>Hello, Khanh!</h1>
-      </div>
+      <InputForm />
   )
 }
 

@@ -1,4 +1,9 @@
 {
+  "scripts": {
+    "dev:client": "npm run dev --prefix client", 
+    "dev:server": "npm install --prefix server",
+    "dev": "npm-run-all --parallel --print-label dev:*"
+  },
   "devDependencies": {
     "@types/react": "^18.2.57",
     "@types/react-dom": "^18.2.19"
