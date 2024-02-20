@@ -1,0 +1,16 @@
+node_modules
+.bashrc.d
+.devcontainer
+.docker
+.dotnet
+.local
+.npm
+.ssh
+.vscode-server
+.bash-history
+.bashrc
+.gitconfig
+.hushlogin
+.npmrc
+.sudo_as_admin_successful
+.bash_history
