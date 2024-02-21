@@ -1,9 +1,23 @@
+import { FormEvent } from "react";
+import Input from "./Input";
+
 export function InputForm() {
-    return (<form>
-        <div>
-        <label>Time On:<input className="border-red-100 border-2" type="number" /></label>
-        <label>Time Off:<input className="border-red-100 border-2" type="number" /></label>
-        <label>Number of Intervals:<input className="border-red-100 border-2" type="number" /></label>
-        </div>
-    </form>)
+  function handleSubmit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    const form = event.currentTarget;
+    const formData = new FormData(form);
+    const formJSON = Object.fromEntries(formData.entries());
+    console.log("inputs", formJSON);
+  }
+
+  return (
+    <form className="flex flex-col" onSubmit={handleSubmit}>
+      <Input label="Time On" />
+      <Input label="Time Off" />
+      <Input label="Number of Intervals" />
+      <Input label="Warm Up" />
+      <Input label="Cooldown" />
+      <button type="submit">Submit</button>
+    </form>
+  );
 }
