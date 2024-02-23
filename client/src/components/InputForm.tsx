@@ -7,16 +7,16 @@ export function InputForm() {
     const form = event.currentTarget;
     const formData = new FormData(form);
     const formJSON = Object.fromEntries(formData.entries());
-    console.log("inputs", formJSON);
+    localStorage.setItem("timer", JSON.stringify(formJSON));
   }
 
   return (
     <form className="flex flex-col" onSubmit={handleSubmit}>
       <Input label="Time On" />
-      <Input label="Time Off" />
+      {/* <Input label="Time Off" />
       <Input label="Number of Intervals" />
       <Input label="Warm Up" />
-      <Input label="Cooldown" />
+      <Input label="Cooldown" /> */}
       <button type="submit">Submit</button>
     </form>
   );
